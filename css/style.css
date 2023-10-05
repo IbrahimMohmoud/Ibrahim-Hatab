@@ -1,0 +1,486 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #02457a;
+  color: #018abe;
+  overflow: auto;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+header h1 {
+  float: left;
+  margin-bottom: 10px;
+  margin-left: 150px;
+  font-size: 40px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+header h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header h1::after {
+  content: "Car";
+  color: #ff0000;
+}
+
+header ul {
+  float: right;
+  margin-right: 150px;
+}
+
+header ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+header ul li a:hover {
+  color: #018abe;
+  border-bottom: 2px solid #018abe;
+  border-radius: 5px;
+}
+
+.wallpaper {
+  background-image: url(../img/WallPaper.jpg);
+  height: 1000px;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.wallpaper h1 {
+  position: absolute;
+  top: 350px;
+  left: 350px;
+  color: #018abe;
+  font-weight: 900;
+  font-size: 50px;
+  letter-spacing: 1px;
+  font-variant: small-caps;
+}
+
+.wallpaper p {
+  position: absolute;
+  top: 450px;
+  left: 250px;
+  color: #fff;
+  font-size: 17px;
+}
+
+.wallpaper a {
+  background-color: #02457a;
+  color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 520px;
+  left: 550px;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 15px 80px;
+  transition: 1s;
+}
+
+.wallpaper a:hover {
+  background-color: #000;
+  color: #018abe;
+  box-shadow: 0 5px 25px rgb(1, 1, 1);
+}
+
+.services {
+  margin-top: 150px;
+  overflow: auto;
+  width: 100%;
+}
+
+.services h1 {
+  color: #02457a;
+  font-weight: 600;
+  font-size: 40px;
+  margin-left: 450px;
+}
+
+.services .underLine {
+  background-color: #018abe;
+  width: 70px;
+  height: 4px;
+  margin-left: 605px;
+  margin-top: 5px;
+}
+
+.services .new {
+  margin-top: 100px;
+  border: 1px solid #02457a;
+  width: 25%;
+  height: 300px;
+  margin-left: 80px;
+  float: left;
+  border-radius: 5px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.services .new i {
+  font-size: 40px;
+  color: #02457a;
+  margin-left: 130px;
+  margin-top: 50px;
+  transition: 0.5s;
+}
+
+.services .new h2 {
+  color: #018abe;
+  padding-left: 90px;
+  margin: 15px 0;
+  font-size: 30px;
+  transition: 0.5s;
+  text-transform: uppercase;
+}
+
+.services .new p {
+  color: #018abe;
+  padding-left: 30px;
+  margin: 15px 0;
+  transition: 0.5s;
+}
+
+.services .new::before {
+  content: "";
+  width: 0%;
+  height: 0%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.services .new:hover {
+  border-radius: 0;
+}
+
+.services .new:hover::before {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.services .new:hover h2 {
+  color: #fff;
+  opacity: 0.9;
+}
+
+.services .new:hover p {
+  color: #018abe;
+  opacity: 0.9;
+}
+
+.services .new:hover i {
+  color: #02457a;
+  opacity: 0.9;
+}
+
+.cars {
+  width: 30%;
+  margin-top: 400px;
+  float: left;
+  position: relative;
+}
+
+.cars .img img {
+  width: 80%;
+  height: 250px;
+  display: block;
+  margin-left: 100px;
+}
+
+.cars .img p {
+  position: absolute;
+  top: 120px;
+  left: 200px;
+  font-size: 25px;
+  color: #018abe;
+  visibility: hidden;
+}
+
+.cars .img h3 {
+  position: absolute;
+  top: 140px;
+  left: 175px;
+  font-size: 25px;
+  color: #fff;
+  font-size: 30px;
+  visibility: hidden;
+}
+
+.cars .img::before {
+  content: "";
+  background-color: #000;
+  width: 89%;
+  height: 300px;
+  display: block;
+  position: absolute;
+  left: 80px;
+  top: -20px;
+  visibility: hidden;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.cars .img:hover::before {
+  opacity: 0.5;
+  visibility: visible;
+}
+
+.cars .img:hover p {
+  visibility: visible;
+  top: 100px;
+  transition: 1s;
+}
+
+.cars .img:hover h3 {
+  visibility: visible;
+  top: 130px;
+  transition: 1s;
+}
+
+.cars2 {
+  width: 30%;
+  margin-top: 40px;
+  float: left;
+  position: relative;
+}
+
+.cars2 .img img {
+  width: 80%;
+  height: 250px;
+  display: block;
+  margin-left: 100px;
+}
+
+.cars2 .img p {
+  position: absolute;
+  top: 120px;
+  left: 200px;
+  font-size: 25px;
+  color: #018abe;
+  visibility: hidden;
+}
+
+.cars2 .img h3 {
+  position: absolute;
+  top: 140px;
+  left: 175px;
+  font-size: 25px;
+  color: #fff;
+  font-size: 30px;
+  visibility: hidden;
+}
+
+.cars2 .img::before {
+  content: "";
+  background-color: #000;
+  width: 89%;
+  height: 300px;
+  display: block;
+  position: absolute;
+  left: 80px;
+  top: -20px;
+  visibility: hidden;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.cars2 .img:hover::before {
+  opacity: 0.5;
+  visibility: visible;
+}
+
+.cars2 .img:hover p {
+  visibility: visible;
+  top: 100px;
+  transition: 1s;
+}
+
+.cars2 .img:hover h3 {
+  visibility: visible;
+  top: 130px;
+  transition: 1s;
+}
+
+.information {
+  margin-top: 1400px;
+  background-image: url(../img/bugatti.jpeg);
+  width: 100%;
+  background-size: cover;
+  overflow: auto;
+  background-attachment: fixed;
+  height: 400px;
+}
+
+.information .info {
+  padding-top: 150px;
+  padding-left: 150px;
+  float: left;
+  margin-left: 30px;
+}
+
+.information .info i {
+  font-size: 40px;
+  color: #018abe;
+}
+
+.information .info #car {
+  margin-left: 10px;
+}
+
+.information .info h2 {
+  font-size: 35px;
+  margin-left: -10px;
+  color: #fff;
+}
+
+.information .info p {
+  font-size: 18px;
+  margin-left: -20px;
+  color: #fff;
+}
+
+.container {
+  margin: 250px 0;
+  margin-left: 100px;
+  overflow: auto;
+  position: relative;
+}
+
+.title {
+  margin-left: 500px;
+}
+
+.border {
+  background-color: #1a237e;
+  width: 100px;
+  height: 5px;
+  margin-left: 500px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+.div1 {
+  border: 1px #306afe solid;
+  width: 300px;
+  height: 400px;
+  float: left;
+  margin: 0 35px;
+}
+
+h3 {
+  padding-top: 25px;
+  text-align: center;
+  opacity: 0.4;
+}
+
+h1 {
+  font-size: 40px;
+  margin-left: 30px;
+  padding-top: 15px;
+  transition: 0.5s;
+}
+
+.s2 {
+  font-size: 17px;
+}
+
+.s1 {
+  margin-left: 80px;
+  display: block;
+  border: 1px #306afe solid;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+p {
+  font-size: 12px;
+  text-align: center;
+  color: #807b7b;
+  margin-top: 30px;
+}
+
+.btn {
+  margin-left: 80px;
+  margin-top: 25px;
+}
+
+button {
+  border: none;
+  border: 2px #306afe solid;
+  width: 120px;
+  height: 25px;
+  cursor: pointer;
+  color: #1a237e;
+  transition: 0.5s;
+}
+
+.div1::before {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  opacity: 0.5;
+  transition: 0.5s;
+  width: 300px;
+  height: 0;
+}
+
+.div1:hover::before {
+  content: "";
+  height: 398px;
+}
+
+.div1:hover h1 {
+  color: #018abe;
+}
+
+.footer {
+  background-color: #000;
+  width: 100%;
+}
+
+.footer .img {
+  margin-left: 500px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.footer .img img {
+  width: 30%;
+}
+
+.footer .img p {
+  color: #fff;
+} /*# sourceMappingURL=style.css.map */
